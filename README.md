@@ -1,3 +1,30 @@
+# 🧠 TransFuser (Forked Version)
+
+This is a custom fork of the original [InterFuser repository](https://github.com/autonomousvision/transfuser), modified for compatibility with CARLA 0.9.14 and Python 3.8.
+
+## 🔧 Modifications in this fork
+
+This fork of InterFuser introduces several changes to ensure compatibility with **Python 3.8** and **CARLA 0.9.14**, as well as to simplify agent evaluation and analysis. The main modifications are:
+
+- 🔄 **Dependency Fixes**:
+  - Removed `matplotlib==3.0.3` and `open3d==0.9.0.0` from `requirements.txt` due to incompatibilities.
+  - Added `carla==0.9.14`, `mmdet==2.25.0`, `mmcv-full==1.5.3` and `torch-scatter` to ensure proper simulation behavior.
+
+- 🧩 **Route Planning Fixes**:
+  - Removed all usage of `GlobalRoutePlannerDAO`, which is unavailable in CARLA 0.9.14.
+  - Refactored related files (`route_manipulation.py`, `atomic_behaviors.py`, `atomic_trigger_conditions.py`) to use `GlobalRoutePlanner(map, resolution)` directly.
+
+- 🗺️ **Evaluator Fix**:
+  - Improved map name comparison in `leaderboard_evaluator.py` to handle different CARLA path formats.
+
+- 🧪 **Evaluation Script**:
+  - Modified `run_evaluation.sh` to work with the updated environment and directory structure.
+
+See [RUNNING.md](./RUNNING.md) for full execution instructions.
+
+--- 
+# ⬇️ Original README from TransFuser
+
 # TransFuser: Imitation with Transformer-Based Sensor Fusion for Autonomous Driving
 
 ## [Paper](http://www.cvlibs.net/publications/Chitta2022PAMI.pdf) | [Supplementary](http://www.cvlibs.net/publications/Chitta2022PAMI_supplementary.pdf) | [Talk](https://www.youtube.com/watch?v=-GMhYcxOiEU) | [Poster](http://www.cvlibs.net/publications/Chitta2022PAMI_poster.pdf) | [Slides](https://kashyap7x.github.io/assets/pdf/talks/Chitta2022AIR.pdf)
