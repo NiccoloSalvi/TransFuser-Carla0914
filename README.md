@@ -1,6 +1,6 @@
 # 🧠 TransFuser (Forked Version)
 
-This is a custom fork of the original [InterFuser repository](https://github.com/autonomousvision/transfuser), modified for compatibility with CARLA 0.9.14 and Python 3.8.
+This is a custom fork of the original [TransFuser repository](https://github.com/autonomousvision/transfuser), modified for compatibility with CARLA 0.9.14 and Python 3.8.
 
 ## 🔧 Modifications in this fork
 
