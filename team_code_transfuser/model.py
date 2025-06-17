@@ -8,7 +8,6 @@ from geometric_fusion import GeometricFusionBackbone
 from late_fusion import LateFusionBackbone
 from latentTF import latentTFBackbone
 from copy import deepcopy
-from point_pillar import PointPillarNet
 
 
 from PIL import Image, ImageFont, ImageDraw
